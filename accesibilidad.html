@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Declaración de accesibilidad | TecnoSur</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: rgb(140, 149, 254);
+        }
+        caption {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <a href="#contenido">Saltar al contenido principal</a>
+    <header>
+    <a href="index.html"><img src="img/logo.svg" alt="TecnoSur Components - Inicio" width="300" height="100" loading="lazy"></a>
+    <nav aria-label="Principal">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="precios.html">Precios</a></li>
+            <li><a href="empresa.html">Empresa</a></li>
+            <li><a href="alta.html">Alta de cliente</a></li>
+            <li><a href="privacidad.html">Privacidad</a></li>
+        </ul>
+    </nav>
+    </header>
+    <main id="contenido">
+        <h1>Declaración de accesibilidad</h1>
+        <p>TecnoSur Components se compromete a que su sitio web sea accesible, siguiendo el nivel AA de las pautas WCAG 2.2. Esta página recoge los resultados de las pruebas realizadas.</p>
+        <section>
+            <h2>Resultados de las pruebas</h2>
+            <table>
+                <caption>Resultados por página</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Página</th>
+                        <th scope="col">Validador W3C</th>
+                        <th scope="col">Lighthouse (accesibilidad)</th>
+                        <th scope="col">Teclado</th>
+                    </tr>
+                </thead>
+                <tbody>
+            <tr>
+                <th scope="row">index.html</th>
+                <td>0 errores</td>
+                <td>99 performance</td>
+                <td>Funciona</td>
+            </tr>
+            <tr>
+                <th scope="row">productos.html</th>
+                <td>0 errores</td>
+                <td>99 performance</td>
+                <td>Funciona</td>
+            </tr>
+            <tr>
+                <th scope="row">contacto.html</th>
+                <td>0 errores</td>
+                <td>99 performance</td>
+                <td>Funciona</td>
+            </tr>
+            <tr>
+                <th scope="row">precios.html</th>
+                <td>0 errores</td>
+                <td>99 performance</td>
+                <td>Funciona</td>
+            </tr>
+            <tr>
+                <th scope="row">empresa.html</th>
+                <td>0 errores</td>
+                <td>97 performance</td>
+                <td>Funciona</td>
+            </tr>
+            <tr>
+                <th scope="row">alta.html</th>
+                <td>0 errores</td>
+                <td>99 performance</td>
+                <td>Funciona</td>
+            </tr>
+            <tr>
+                <th scope="row">privacidad.html</th>
+                <td>0 errores</td>
+                <td>99 performance</td>
+                <td>Funciona</td>
+            </tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h2>Prueba con lector de pantalla</h2>
+            <p>Lector utilizado: NVDA. Problemas detectados o confirmados:</p>
+            <ol>
+                <li>El logo tenía el texto alternativo «logo», sin indicar nombre de la empresa ni que el enlace lleva al inicio. Corregido: «TecnoSur Components - Inicio».</li>
+                <li>Una celda de la tabla de resultados contenía una imagen con <code>src</code> vacío, que un lector de pantalla anunciaría como imagen sin nombre y el validador marca como error. Corregido: se ha eliminado.</li>
+                <li>El enlace de descarga del catálogo no indicaba que se trataba de un PDF. Corregido: el texto del enlace ahora dice «Catálogo de productos (PDF)».</li>
+            </ol>
+        </section>
+    </main>
+    <footer>
+        <address>
+            TecnoSur Components ·
+            <a href="mailto:info@tecnosur.com">info@tecnosur.com</a> ·
+            <a href="tel:+34912345678">+34 912 345 678</a>
+        </address>
+        <p><a href="contacto.html">Contacto</a> · <a href="privacidad.html">Privacidad</a> · <a href="accesibilidad.html" aria-current="page">Accesibilidad</a></p>
+    </footer>
+</body>
+</html>

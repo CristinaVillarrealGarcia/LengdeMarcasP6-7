@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alta</title>
+</head>
+<body>
+    <a href="#contenido">Saltar al contenido principal</a>
+    <header>
+   <a href="index.html"><img src="img/logo.svg" alt="logo" width="300" height="100" loading="lazy"></a>
+    <h1>Alta</h1>
+    <nav aria-label="Principal">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="precios.html">Precios</a></li>
+            <li><a href="empresa.html">Empresa</a></li>
+            <li><a href="alta.html" aria-current="page">Alta de cliente</a></li>
+            <li><a href="privacidad.html">Privacidad</a></li>
+        </ul>
+    </nav> 
+</header>
+<main id="contenido">
+    <form action="https://httpbin.org/post" method="post">
+    <fieldset> 
+        <legend>Alta de cliente</legend>
+        <fieldset>
+            <legend>Datos personales</legend>
+        <label for="nombre">Nombre: </label>
+        <input type="text" name="nombre" id="nombre" required autocomplete="name">
+
+        <label for="apellidos">Apellidos: </label>
+        <input type="text" name="apellidos" id="apellidos" required autocomplete="family-name">
+
+        <label for="dni">DNI/NIE: </label>
+        <input type="text" name="dni" id="dni" required pattern="[0-9]{8}[A-Za-z]" title="Introduce 8 números, del 0 al 9, y una letra al final">
+
+        <label for="correo">Correo: </label>
+        <input type="email" name="correo" id="correo" required autocomplete="email">
+
+        <label for="tel">Teléfono</label>
+        <input type="tel" name="tel" id="tel" pattern="[6-9][0-9]{8}" title="Introduzca 9 números, el número debe empezar por 6 o por 9" required autocomplete="tel">
+
+        <label for="fecha-nacimiento">Fecha de nacimiento</label>
+        <input type="date" name="fecha-nacimiento" id="fecha-nacimiento" required max="2026-10-14" autocomplete="bday">
+        
+
+        <label>Tipo de cliente: </label>
+        <input type="radio" name="tipo" id="tipo-particular" required>
+        <label for="tipo-particular">Particular</label>
+        <input type="radio" name="tipo" id="tipo-empresa" required>
+        <label for="tipo-empresa">Empresa</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Dirección</legend>
+        <label for="provincia">Provincia: </label>
+        <select name="provincia" id="provincia" required>
+            <option value="">Elige una provincia</option>
+            <optgroup label="Comunidad Valenciana">
+                <option value="vlc">Valencia</option>
+                <option value="ali">Alicante</option>
+                <option value="cas">Castellón</option>
+                </optgroup>
+            <optgroup label="Comunidad de Andalucía">
+                <option value="alm">Almería</option>
+                <option value="cad">Cádiz</option>
+                <option value="cor">Córdoba</option>
+                </optgroup>
+        </select>
+
+        <label for="cod-postal">Código Postal: </label>
+        <input type="text" name="cod-postal" id="cod-postal" pattern="[0-9]{5}" title="Introduce 5 números del 1 al 9" autocomplete="postal-code">
+
+        <label for="calle">Calle: </label>
+        <input type="text" name="calle" id="calle" autocomplete="address-line1">
+        </fieldset>
+
+        <fieldset>
+            <legend>Me interesa</legend>
+        <input type="checkbox" name="intereses" value="portatiles" id="i-portatiles">
+        <label for="i-portatiles">Portátiles</label>
+
+        <input type="checkbox" name="intereses" value="monitores" id="i-monitores">
+        <label for="i-monitores">Monitores</label>
+        </fieldset>
+
+        <label for="comentarios">Comentarios: </label>
+        <textarea name="comentarios" id="comentarios"></textarea>
+
+        <input type="checkbox" id="rgpd" name="rgpd" value="si" required>
+        <label for="rgpd">
+            Acepto la <a href="privacidad.html">Política de privacidad</a>
+        </label>
+
+        <label for="pass">Contraseña: </label>
+        <input type="password" name="password" id="pass" required minlength="8">
+    </fieldset>
+    <button type="submit">Enviar</button>
+    <button type="reset">Borrar</button>
+    </form>
+    </main>
+    <footer>
+        <address>
+            TecnoSur Components ·
+            <a href="mailto:info@tecnosur.com">info@tecnosur.com</a> ·
+            <a href="tel:+34912345678">+34 912 345 678</a>
+        </address>
+        <p><a href="contacto.html">Contacto</a> · <a href="privacidad.html">Privacidad</a> · <a href="accesibilidad.html">Accesibilidad</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empresa</title>
+</head>
+<body>
+    <a href="#contenido">Saltar al contenido principal</a>
+    <header>
+        <a href="index.html"><img src="img/logo.svg" alt="logo" width="300" height="100" loading="lazy"></a>
+        <h1>Nuestra Empresa</h1>
+        <nav aria-label="Principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="precios.html">Precios</a></li>
+                <li><a href="empresa.html" aria-current="page">Empresa</a></li>
+                <li><a href="alta.html">Alta de cliente</a></li>
+                <li><a href="privacidad.html">Privacidad</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main id="contenido">
+        <section>
+            <h2>Nuestra Historia</h2>
+            <video width="600" height="400" controls poster="img/poster-video.jpg">
+                <source src="video/presentacion.mp4" type="video/mp4">
+                <source src="video/presentacion.webm" type="video/webm">
+                <track src="video/subtitulos-es.vtt" kind="subtitles" srclang="es" label="Español">
+                Presentación de nuestra empresa.
+            </video>
+        </section>
+
+        <section>
+            <h2>Donde encontrarnos:</h2> <!-- 1. h2 movido dentro del section -->
+            <!-- 2. Espacio corregido en marker y <br/> cambiado a <br> -->
+            <iframe width="425" height="350" src="https://www.openstreetmap.org/export/embed?bbox=18.91725540161133%2C17.85574102168104%2C19.030551910400394%2C17.925985995675806&amp;marker=17,8908580,18,9846250" style="border: 1px solid black" loading="lazy" title="Mapa de la ubicación de la empresa"></iframe><br><small><a href="https://www.openstreetmap.org/#map=14/17.89087/18.97390">Ver el mapa</a></small>
+        </section>
+
+        <section>
+            <h2>Video en YouTube</h2> <!-- 3. h2 movido dentro del section -->
+            <!-- 4. frameborder="0" eliminado -->
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/S_dfq9rFWAE?si=QaL09MhLi1Q1Cld6" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+        </section>
+    </main>
+
+    <footer>
+        <section>
+            <h2>Nuestra Melodía</h2> <!-- 5. h2 movido dentro del section -->
+            <audio controls>
+                <source src="audio/sintonia.mp3" type="audio/mpeg">
+                <source src="audio/sintonia.ogg" type="audio/ogg">
+                Nuestra melodía
+            </audio>
+        </section>
+        <address>
+            TecnoSur Components ·
+            <a href="mailto:info@tecnosur.com">info@tecnosur.com</a> ·
+            <a href="tel:+34912345678">+34 912 345 678</a>
+        </address>
+        <p><a href="contacto.html">Contacto</a> · <a href="privacidad.html">Privacidad</a> · <a href="accesibilidad.html">Accesibilidad</a></p>
+    </footer>
+</body>
+</html>
